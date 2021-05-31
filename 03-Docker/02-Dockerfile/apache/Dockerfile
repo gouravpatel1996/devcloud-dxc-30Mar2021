@@ -2,7 +2,7 @@
 FROM ubuntu:16.04
 
 # Maintainer
-MAINTAINER Amit Vashist <amitvashist7@outlook.com>
+MAINTAINER Gaurav Patel <gauravpatel5577@outlook.com>
 
 # Update the Apt Repo
 RUN apt-get update 
@@ -15,6 +15,7 @@ COPY index.html /var/www/html/index.html
 
 # Expose 
 EXPOSE 80
+EXPOSE 3306
 
 # Start the Service
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
