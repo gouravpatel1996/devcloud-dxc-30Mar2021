@@ -9,7 +9,7 @@ node('master') {
 notify('Started')
 
 stage('Git CheckOut') {
-  git branch: 'main', url: 'https://github.com/amitvashisttech/devcloud-dxc-30Mar2021.git'
+  git branch: 'main', url: 'https://github.com/gouravpatel1996/devcloud-dxc-30Mar2021.git'
  }
 
 stage('Build Management') { 
@@ -39,7 +39,7 @@ notify('Completed')
 
 def notify(status){
     emailext(
-      to: "amitvashist7@outlook.com",
+      to: "gauravpatel5577@outlook.com",
       subject: "${status}: JOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
       body: """<p>${status}: JOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                <p> Check the Console Output at <a href='${env.BUILD_URL}'>${env.JOB_NAME}[${env.BUILD_NUMBER}]</a></p>""",      
